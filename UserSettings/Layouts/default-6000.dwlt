@@ -432,9 +432,15 @@ MonoBehaviour:
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< Updated upstream
     m_SelectedIDs: b2150100
     m_LastClickedID: 71090
     m_ExpandedIDs: 00000000b4fa0000c0030100
+=======
+    m_SelectedIDs: 7eda0000
+    m_LastClickedID: 55934
+    m_ExpandedIDs: 
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public UIManager uimanager;
+<<<<<<< Updated upstream
     public int vidas = 3;
 
     [Header("Gemas")]
@@ -15,6 +16,15 @@ public class GameManager : MonoBehaviour
     public GameObject panelGameOver;
 
     public object GemasTotales { get; internal set; }
+=======
+    public int puntos;
+
+    [Header("Orbes")]
+    public int orbes = 0;
+    public TextMeshProUGUI textorbes;
+
+    public object OrbesTotales { get; internal set; }
+>>>>>>> Stashed changes
 
     private void Start()
     {
@@ -35,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     void start()
     {
+<<<<<<< Updated upstream
         CargarMonedas();
         ActualizarMonedasUI();
 
@@ -64,6 +75,40 @@ public class GameManager : MonoBehaviour
         gemas = PlayerPrefs.GetInt("Gemas", 0);
     }
 
+=======
+        CargarOrbes();
+        ActualizarOrbesUI();
+
+    }
+
+    public void SumarOrbe(int cantidad)
+    {
+        orbes += cantidad;
+        ActualizarOrbesUI();
+        GuardarOrbes();
+    }
+
+    void ActualizarOrbesUI()
+    {
+        if (textorbes != null)
+            textorbes.text = "x" + orbes.ToString();
+    }
+
+    void GuardarOrbes()
+    {
+        PlayerPrefs.SetInt("Orbes", orbes);
+        PlayerPrefs.Save();
+    }
+
+    void CargarOrbes()
+    {
+        orbes = PlayerPrefs.GetInt("Orbes", 0);
+    }
+
+
+   
+
+>>>>>>> Stashed changes
     private void Awake()
     {
         if (instance == null)
@@ -79,6 +124,10 @@ public class GameManager : MonoBehaviour
     }
 
 
+<<<<<<< Updated upstream
 
 
 }
+=======
+}
+>>>>>>> Stashed changes

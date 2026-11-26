@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream
+=======
+using TMPro;
+>>>>>>> Stashed changes
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+<<<<<<< Updated upstream
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,4 +18,19 @@ public class UIManager : MonoBehaviour
     {
         
     }
+=======
+    public TextMeshProUGUI textorbes;
+
+  
+    void Update()
+    {
+        if (GameManager.instance != null)
+        {
+            textorbes.text = "X" + GameManager.instance.puntos;
+        }
+
+
+    }
+
+>>>>>>> Stashed changes
 }
