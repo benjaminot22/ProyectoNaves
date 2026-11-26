@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class EnemyHorizontalScript : MonoBehaviour
 {
-    [SerializeField] private int damage = 10;
     public float velocidad = 2f;
     private int direccion = -1;
+    public GameObject GameOver;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+        GameOver.SetActive(false);
+    }
 
     void Update()
     {
@@ -33,7 +38,8 @@ public class EnemyHorizontalScript : MonoBehaviour
         }
         else
         {
-            //collision.gameObject.GetComponent<PlayerStats>().TakeDamage(10);
+            Time.timeScale = 0f;
+            GameOver.SetActive (true);
         }
 
 

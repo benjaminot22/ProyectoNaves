@@ -100,5 +100,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8691e9af0d37b664f8d39c2136ce6890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   velocidad: 2
+  GameOver: {fileID: 4720433414366098637, guid: f3e3e625bdb56f7478dcf22ce55d6a84, type: 3}
