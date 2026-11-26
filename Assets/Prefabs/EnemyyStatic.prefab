@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8403874135313706906}
   - component: {fileID: 8641331027222726361}
   m_Layer: 0
-  m_Name: EnemyyStatic
+  m_Name: EnemyStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f149b9ab0222943b7c8d392b0d517a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOver: {fileID: 4720433414366098637, guid: f3e3e625bdb56f7478dcf22ce55d6a84, type: 3}
