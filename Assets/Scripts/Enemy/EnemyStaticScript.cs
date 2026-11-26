@@ -15,8 +15,8 @@ public class EnemyStaticScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") == true)
         {
-            Time.timeScale = 0f;
             GameOver.SetActive(true);
+           
         }
     }
 

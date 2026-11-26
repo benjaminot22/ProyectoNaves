@@ -38,8 +38,9 @@ public class EnemyHorizontalScript : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 0f;
             GameOver.SetActive (true);
+      
+
         }
 
 
