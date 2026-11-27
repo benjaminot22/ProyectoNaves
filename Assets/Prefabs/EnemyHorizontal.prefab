@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3956501145584986823}
   - component: {fileID: 2596505096805732242}
   - component: {fileID: 5350858171711610023}
+  - component: {fileID: 3302275445124805686}
   m_Layer: 0
   m_Name: EnemyHorizontal
   m_TagString: Untagged
@@ -103,7 +104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  GameOver: {fileID: 4720433414366098637, guid: f3e3e625bdb56f7478dcf22ce55d6a84, type: 3}
 --- !u!50 &2596505096805732242
 Rigidbody2D:
   serializedVersion: 5
@@ -119,7 +119,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -177,3 +177,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3302275445124805686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6463822351792788239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60da61e0387b7c5459afbdc1822e87ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

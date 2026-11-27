@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8403874135313706906}
   - component: {fileID: 8641331027222726361}
   - component: {fileID: 5723690190746472732}
+  - component: {fileID: 9028701580375009666}
   m_Layer: 0
   m_Name: EnemyStatic
   m_TagString: Untagged
@@ -148,7 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f149b9ab0222943b7c8d392b0d517a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOver: {fileID: 4720433414366098637, guid: f3e3e625bdb56f7478dcf22ce55d6a84, type: 3}
 --- !u!50 &5723690190746472732
 Rigidbody2D:
   serializedVersion: 5
@@ -164,7 +164,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -176,3 +176,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &9028701580375009666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669677644320949672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60da61e0387b7c5459afbdc1822e87ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  moveDirection: {x: 0, y: -1}
+  destroyLimitY: -6

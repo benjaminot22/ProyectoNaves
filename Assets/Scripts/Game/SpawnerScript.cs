@@ -2,39 +2,39 @@ using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
 {
-    [SerializeField] private GameObject[] enemyPrefabs;
-    public float obstacleSpawnTime = 2f;
-    public float enemySpeed = 1f;
+    [Header("Prefabs a Spawnear")]
+    public GameObject[] prefabsToSpawn;
 
-    public float timeUntilEnemySpawn;
+    [Header("Configuración de Tiempo")]
+    public float spawnInterval = 1.5f;  
+    private float timer;
 
+    [Header("Coordenadas de Spawn")]
+    public float minX = -6f;           
+    public float maxX = 6f;            
+    public float spawnY = 2f;          
 
-    private void Update()
+    void Update()
     {
-        SpawnLoop();
-    }
+        timer += Time.deltaTime;
 
-    private void SpawnLoop()
-    {
-        timeUntilEnemySpawn += Time.deltaTime;
-
-        if (timeUntilEnemySpawn >= obstacleSpawnTime)
+        if (timer >= spawnInterval)
         {
-            Spawn();
-            timeUntilEnemySpawn = 0f;
+            SpawnObject();
+            timer = 0f;
         }
     }
 
-    private void Spawn()
+    void SpawnObject()
     {
-        GameObject ObstacleToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        if (prefabsToSpawn.Length == 0) return;
 
-        GameObject spawnedObstacle = Instantiate(ObstacleToSpawn, transform.position, Quaternion.identity);
+        int randomIndex = Random.Range(0, prefabsToSpawn.Length);
+        GameObject selectedPrefab = prefabsToSpawn[randomIndex];
 
-        Rigidbody2D obstacleRB = spawnedObstacle.GetComponent<Rigidbody2D>();
-        obstacleRB.linearVelocity = Vector2.left * enemySpeed;
+        float randomX = Random.Range(minX, maxX);
+        Vector3 spawnPosition = new Vector3(randomX, spawnY, 0f);
 
+        Instantiate(selectedPrefab, spawnPosition, Quaternion.identity);
     }
-
 }
-

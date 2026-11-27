@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8202896361004290635}
   - component: {fileID: 152798908148051944}
   - component: {fileID: 2167312356379130922}
+  - component: {fileID: 8441617084916265884}
   m_Layer: 0
   m_Name: Orbe
   m_TagString: Untagged
@@ -137,3 +138,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19e4900f77976e740b6c75412d9e8d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  valororbe: 100
+--- !u!114 &8441617084916265884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601877429833938761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60da61e0387b7c5459afbdc1822e87ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  moveDirection: {x: 0, y: -1}
+  destroyLimitY: -6

@@ -1,16 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHorizontalScript : MonoBehaviour
 {
     public float velocidad = 2f;
     private int direccion = -1;
-    public GameObject GameOver;
-
-    private void Start()
-    {
-        Time.timeScale = 1f;
-        GameOver.SetActive(false);
-    }
+   
 
     void Update()
     {
@@ -38,13 +33,8 @@ public class EnemyHorizontalScript : MonoBehaviour
         }
         else
         {
-            GameOver.SetActive (true);
-      
-
+            SceneManager.LoadScene("GameOver");
         }
-
-
-
 
     }
 }
